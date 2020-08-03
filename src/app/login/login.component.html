@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+      <form [formGroup]="formLogin" (ngSubmit)="login()">
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input formControlName="email"   class="form-control" id="email" >
+        </div>
+        <div class="alert alert-danger"  *ngIf="formLogin.get('email').invalid && (formLogin.get('email').touched || formLogin.get('email').dirty) ">
+        <diV *ngIf="formLogin.get('email').getError('required')">This field Is required</diV>
+        <div *ngIf="formLogin.get('email').getError('email')">This field shoud be an email address</div>
+
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input  formControlName="password"  type="password" class="form-control" id="password">
+        </div>
+        <div class="alert alert-danger"  *ngIf="formLogin.get('password').invalid && (formLogin.get('password').touched || formLogin.get('password').dirty  )">
+            <diV *ngIf="formLogin.get('password').getError('required')">This field Is required</diV>
+            <div *ngIf="formLogin.get('password').getError('minlength')">This field shoud be min 6</div>
+        </div>
+        <button [disabled]="formLogin.invalid" class="btn btn-primary btn-block">Sign In</button>
+      </form>
+    </div>
+  </div>
