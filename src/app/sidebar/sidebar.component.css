@@ -177,3 +177,9 @@ a.article:hover {
     background-color: transparent;
     border: none;
 }
+
+#toast-container > .toast-info {
+    background-color: #0c2a77 !important;
+  }
+
+  

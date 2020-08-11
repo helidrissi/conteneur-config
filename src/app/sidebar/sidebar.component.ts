@@ -44,6 +44,7 @@ export class SidebarComponent implements OnInit {
       {
         timeOut: 3000,
         positionClass: 'toast-bottom-left'
+        
       }
   )
     this.router.navigateByUrl("/login");
