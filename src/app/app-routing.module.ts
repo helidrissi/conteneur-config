@@ -1,3 +1,4 @@
+import { AcceuilComponent } from './acceuil/acceuil.component';
 import { PageNotFoundComponent } from './partials/page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 
@@ -9,8 +10,8 @@ import{AfterAuthGuard} from '../app/guards/after-auth.guard'
 
 
 const routes: Routes = [
-  { path: '',  redirectTo: "/home", pathMatch: "full",canActivate:[AuthGuard] },
-  { path: 'home', component: HomeComponent ,canActivate:[AuthGuard]},
+  { path: '',  redirectTo: "/acceuil", pathMatch: "full",canActivate:[AuthGuard] },
+  { path: 'acceuil', component: AcceuilComponent ,canActivate:[AuthGuard]},
   { path: 'login', component: LoginComponent ,canActivate:[AfterAuthGuard]},
   { path: '**',component:PageNotFoundComponent}
 
