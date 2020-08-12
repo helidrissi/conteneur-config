@@ -1,0 +1,10 @@
+{
+    "Email": "Email",
+    "EmailRequired": "This field requires a valid email address",
+    "EmailError": "This field is required",
+    "Pwd": "Password",
+    "LoginRequired": "This field must contain 6 characters minimum",
+    "LoginError": "This field is required",
+    "Login": "Login",
+    "SelectLang": "Choose your language :"
+}

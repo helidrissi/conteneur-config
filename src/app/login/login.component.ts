@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import{FormGroup,FormControl, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,7 +23,9 @@ export class LoginComponent implements OnInit {
 
   })
 
-  constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService) { }
+  constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, private translate: TranslateService) { 
+    translate.setDefaultLang('fr');
+  }
 
   ngOnInit(): void {
   }
@@ -38,5 +42,9 @@ export class LoginComponent implements OnInit {
     this.account.changeStatus(true);
 
     this.router.navigateByUrl("/");
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
   }
 }
