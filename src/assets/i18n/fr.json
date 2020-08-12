@@ -1,11 +1,26 @@
 {
-    "Email": "Email",
-    "EmailRequired": "Ce champ nécessite une adresse email valide",
-    "EmailError": "Ce champ est obligatoire",
+    "Utile": {
+        "Connexion": "Se connecter",
+        "Deconnexion": "Se déconnecter"
+    },
+    "Login": {
+        "Email": "Email",
+        "EmailRequis": "Ce champ nécessite une adresse email valide",
+        "EmailErreur": "Ce champ est obligatoire",
+        "Mdp": "Mot de passe",
+        "LoginRequis": "Ce champ doit contenir 6 caractères minimum",
+        "LoginErreur": "Ce champ est obligatoire",
+        "SelectLang": "Choissisez la langue :"
+    },
+    "SideBar": {
+        "Acceuil": "Accueil",
+        "Liste": "Prototype",
+        "Sub1": "Marques",
+        "Sub2": "Marques (BDD)",
+        "Sub3": "Articles",
+        "Sub4": "Mise à jour tarifs",
+        "Sub5": "Saisie des ventes",
+        "Sub6": "Historique des sorties"
+    }
 
-    "Pwd": "Mot de passe",
-    "LoginRequired": "Ce champ doit contenir 6 caractères minimum",
-    "LoginError": "Ce champ est obligatoire",
-    "Login": "Se connecter",
-    "SelectLang": "Choissisez la langue :"
 }

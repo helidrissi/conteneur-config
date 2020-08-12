@@ -1,10 +1,25 @@
 {
-    "Email": "Email",
-    "EmailRequired": "This field requires a valid email address",
-    "EmailError": "This field is required",
-    "Pwd": "Password",
-    "LoginRequired": "This field must contain 6 characters minimum",
-    "LoginError": "This field is required",
-    "Login": "Login",
-    "SelectLang": "Choose your language :"
+    "Utile": {
+        "Connexion": "Login",
+        "Deconnexion": "Logout"
+    },
+    "Login": {
+        "Email": "Email",
+        "EmailRequis": "This field requires a valid email address",
+        "EmailErreur": "This field is required",
+        "Mdp": "Password",
+        "LoginRequis": "This field must contain 6 characters minimum",
+        "LoginErreur": "This field is required",
+        "SelectLang": "Choose your language :"
+    },
+    "SideBar": {
+        "Acceuil": "Home",
+        "Liste": "Prototype",
+        "Sub1": "Brand",
+        "Sub2": "Brand (BDD)",
+        "Sub3": "Articles",
+        "Sub4": "Tariff update",
+        "Sub5": "Entering sales",
+        "Sub6": "History of outings"
+    }
 }
