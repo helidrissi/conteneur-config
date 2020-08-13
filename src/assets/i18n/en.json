@@ -1,0 +1,27 @@
+{
+    "Commun": {
+        "Connexion": "Login",
+        "Deconnexion": "Logout"
+    },
+    "Login": {
+        "Email": "Email",
+        "EmailRequis": "This field requires a valid email address",
+        "EmailErreur": "This field is required",
+        "Mdp": "Password",
+        "LoginRequis": "This field must contain 6 characters minimum",
+        "LoginErreur": "This field is required",
+        "SelectLang": "Choose your language :",
+        "Choix": "Choose a language"
+    },
+    "SideBar": {
+        "Titre": "S@phir",
+        "Acceuil": "Home",
+        "Liste": "Prototype",
+        "Sub1": "Brand",
+        "Sub2": "Brand (BDD)",
+        "Sub3": "Articles",
+        "Sub4": "Tariff update",
+        "Sub5": "Entering sales",
+        "Sub6": "History of outings"
+    }
+}
