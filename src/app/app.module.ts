@@ -47,7 +47,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
   providers: [{
     provide:HTTP_INTERCEPTORS,
     useClass:JwtInterceptor,
-    multi:true
+    multi:true,
   }
 
   ],

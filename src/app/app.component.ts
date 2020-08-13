@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-
+import { TranslateService, DEFAULT_LANGUAGE } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +10,8 @@ export class AppComponent {
   title = 'conteneur-front';
 
   constructor(public translateParent: TranslateService){
-    translateParent.setDefaultLang('fr');
+    var lang = localStorage.getItem('lang');
+    translateParent.setDefaultLang(lang);
   }
+
 }

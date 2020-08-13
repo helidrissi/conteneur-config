@@ -46,6 +46,7 @@ a:focus {
     margin: 40px 0;
 }
 
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -76,7 +77,6 @@ a:focus {
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #0c2a77;
-    
 }
 
 #sidebar ul p {
@@ -91,7 +91,8 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color:  #0c2a77;;
+    color: #0c2a77;
+    ;
     background: #fff;
 }
 
@@ -116,7 +117,8 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #0c2a77;;
+    background: #0c2a77;
+    ;
 }
 
 ul.CTAs {
@@ -130,11 +132,12 @@ ul.CTAs a {
     border-radius: 5px;
     margin-bottom: 5px;
 }
-.btn-infoo{
+
+.btn-infoo {
     background: #fff;
     color: #0c2a77;
-
 }
+
 a.download {
     background: #fff;
     color: #0c2a77;
@@ -146,16 +149,17 @@ a.article:hover {
     color: #fff !important;
 }
 
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 
 #content {
     width: 100%;
-    padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -172,14 +176,12 @@ a.article:hover {
         display: none;
     }
 }
-.btn-logout{
 
+.btn-logout {
     background-color: transparent;
     border: none;
 }
 
-#toast-container > .toast-info {
+#toast-container>.toast-info {
     background-color: #0c2a77 !important;
-  }
-
-  
+}

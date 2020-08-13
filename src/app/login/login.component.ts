@@ -21,12 +21,13 @@ export class LoginComponent implements OnInit {
     password:new FormControl('',[Validators.required,Validators.minLength(6)]),
   })
 
-  constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, public translateChild: TranslateService, public app: AppComponent) { 
-    translateChild.setDefaultLang('fr');
+  constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
+    public translateChild: TranslateService, public app: AppComponent) { 
+    var lang = localStorage.getItem('lang');
+    translateChild.setDefaultLang(lang);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   login(){
     this.authService.login(this.formLogin.value).subscribe(res=>this.handleResponse(res))
   }
@@ -42,5 +43,7 @@ export class LoginComponent implements OnInit {
   useLanguage(language: string) {
     this.translateChild.use(language);
     this.app.translateParent = this.translateChild;
+
+    localStorage.setItem('lang',language);
   }
 }

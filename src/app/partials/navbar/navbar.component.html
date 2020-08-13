@@ -9,7 +9,7 @@
 
         <ul class="navbar-nav ml-auto">
             <li *ngIf="!currentuser" class="nav-item">
-                <a routerLink="/login" class="nav-link">{{"Utile.Connexion" | translate}}</a>
+                <a routerLink="/login" class="nav-link">{{"Commun.Connexion" | translate}}</a>
             </li>
             <ul *ngIf="currentuser" class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -17,7 +17,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <button (click)="logout()" class="nav-link btn-logout">{{"Utile.Deconnexion" | translate}}</button>
+                    <button (click)="logout()" class="nav-link btn-logout">{{"Commun.Deconnexion" | translate}}</button>
                 </li>
             </ul>
 

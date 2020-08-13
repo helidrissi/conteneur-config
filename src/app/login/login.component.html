@@ -20,11 +20,12 @@
                 <div *ngIf="formLogin.get('password').getError('required')">{{"Login.LoginRequis" | translate}}</div>
                 <div *ngIf="formLogin.get('password').getError('minlength')">{{"Login.LoginErreur" | translate}}</div>
             </div>
-            <button [disabled]="formLogin.invalid" class="btn btn-primary black-background white btn-block">{{"Utile.Connexion" | translate}}</button>
+            <button [disabled]="formLogin.invalid" class="btn btn-primary black-background white btn-block">{{"Commun.Connexion" | translate}}</button>
             <label for="language-select">{{"Login.SelectLang" | translate}}</label>
-            <select name="" id="select-lang">
-                  <option (click)="useLanguage('fr')">FR</option>
-                  <option (click)="useLanguage('en')">ENG</option>
+            <select name="" id="selectLang">
+                    <option value="">{{"Login.Choix" | translate}}</option>
+                    <option class="langOption" (click)="useLanguage('fr')" value="fr">FR</option>
+                    <option class="langOption" (click)="useLanguage('en')" value="en">ENG</option>
             </select>
         </form>
     </div>

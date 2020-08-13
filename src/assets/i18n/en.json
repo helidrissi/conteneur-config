@@ -1,5 +1,5 @@
 {
-    "Utile": {
+    "Commun": {
         "Connexion": "Login",
         "Deconnexion": "Logout"
     },
@@ -10,9 +10,11 @@
         "Mdp": "Password",
         "LoginRequis": "This field must contain 6 characters minimum",
         "LoginErreur": "This field is required",
-        "SelectLang": "Choose your language :"
+        "SelectLang": "Choose your language :",
+        "Choix": "Choose a language"
     },
     "SideBar": {
+        "Titre": "S@phir",
         "Acceuil": "Home",
         "Liste": "Prototype",
         "Sub1": "Brand",
