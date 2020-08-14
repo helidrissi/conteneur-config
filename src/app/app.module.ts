@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { MarquesComponent } from './marques/marques.component';
+import { SafePipe } from './safe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     LoginComponent,
     SidebarComponent,
     AcceuilComponent,
+    MarquesComponent,
+    SafePipe,
     
   ],
   imports: [

@@ -1,3 +1,4 @@
+import { MarquesService } from './../services/marques.service';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { AccountService } from '../services/account.service';
@@ -14,7 +15,7 @@ export class SidebarComponent implements OnInit {
   currentuser:null;
   public userInfos: any = null;
 
-  constructor(private account:AccountService,private token:TokenService,private router:Router, private toastr: ToastrService) { }
+  constructor(private account:AccountService,private token:TokenService,private router:Router, private toastr: ToastrService,private marque:MarquesService) { }
 
   ngOnInit(): void {
     $(document).ready(function () {
@@ -33,7 +34,14 @@ export class SidebarComponent implements OnInit {
 
     
   }
+ 
 
+  fct()
+    
+  {
+   window.location.href = 'http://localhost:9090'
+  }
+  
   logout(){
 
     this.token.remove();
