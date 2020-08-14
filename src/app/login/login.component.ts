@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
     public translateChild: TranslateService, public app: AppComponent) { 
     var lang = localStorage.getItem('lang');
-    translateChild.setDefaultLang(lang);
+    translateChild.setDefaultLang('fr');
   }
 
   ngOnInit(): void {}
