@@ -23,8 +23,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
     public translateChild: TranslateService, public app: AppComponent) { 
-    var lang = localStorage.getItem('lang');
+
+
+    var lang = window.localStorage.getItem('lang');
     translateChild.setDefaultLang('fr');
+
   }
 
   ngOnInit(): void {}
@@ -41,9 +44,10 @@ export class LoginComponent implements OnInit {
   }
 
   useLanguage(language: string) {
+    window.localStorage.setItem('lang',language);
+
     this.translateChild.use(language);
     this.app.translateParent = this.translateChild;
 
-    localStorage.setItem('lang',language);
   }
 }
