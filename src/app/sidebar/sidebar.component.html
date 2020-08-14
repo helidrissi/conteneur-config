@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    
+
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -25,46 +25,47 @@
         <!-- Sidebar  -->
         <nav *ngIf="currentuser" id="sidebar">
             <div class="sidebar-header">
-                <h2>S@phir</h2>
-                
+                <h2>{{"SideBar.Titre" | translate}}</h2>
+
             </div>
 
             <ul class="list-unstyled components">
-               
+
                 <li class="active">
                     <a href="#">
-                        <i class="fa fa-home"></i>
-                        Acceuil
+                        <i class="fa fa-home"></i> {{"SideBar.Acceuil" | translate}}
                     </a>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fa fa-copy"></i>
-                        Prototype
+                        <i class="fa fa-copy"></i> {{"SideBar.Liste" | translate}}
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a routerLink="/marques">Marques</a>
+
+                            <a routerLink="/marques">{{"SideBar.Sub1" | translate}}</a>
+
+                            
+
                         </li>
                         <li>
-                            <a href="#">Marques (BDD)</a>
+                            <a href="#">{{"SideBar.Sub2" | translate}}</a>
                         </li>
                         <li>
-                            <a href="#">Articles</a>
+                            <a href="#">{{"SideBar.Sub3" | translate}}</a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-euro"></i>
-                                Mise à jour tarifs
+                                <i class="fa fa-euro"></i> {{"SideBar.Sub4" | translate}}
                             </a>
                         </li>
                         <li>
-                            <a href="#">Saisie des ventes</a>
+                            <a href="#">{{"SideBar.Sub5" | translate}}</a>
                         </li>
                         <li>
-                            <a href="#">Historique des sorties</a>
+                            <a href="#">{{"SideBar.Sub6" | translate}}</a>
                         </li>
                     </ul>
                 </li>
-              
+
             </ul>
 
         </nav>
@@ -84,22 +85,22 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul   class="navbar-nav ml-auto">
+                        <ul class="navbar-nav ml-auto">
                             <li *ngIf="!currentuser" class="nav-item">
-                              <a routerLink="/login" class="nav-link">Login</a>
+                                <a routerLink="/login" class="nav-link">{{"Commun.Connexion" | translate}}</a>
                             </li>
                             <ul *ngIf="currentuser" class="navbar-nav ml-auto">
-                              <li class="nav-item">
-                                <button  class="nav-link btn-logout">{{userInfos.name}}</button>
-                              </li>
-                        
-                              <li class="nav-item">
-                                <button (click)="logout()" class="nav-link btn-logout">Logout</button>
-                              </li>
+                                <li class="nav-item">
+                                    <button class="nav-link btn-logout">{{userInfos.name}}</button>
+                                </li>
+
+                                <li class="nav-item">
+                                    <button (click)="logout()" class="nav-link btn-logout">{{"Commun.Deconnexion" | translate}}</button>
+                                </li>
                             </ul>
-                      
-                            
-                          </ul>
+
+
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -115,7 +116,7 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    
+
 </body>
 
 </html>
