@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'conteneur-front';
 
   constructor(public translateParent: TranslateService){
-    var lang = localStorage.getItem('lang');
+    var lang = window.localStorage.getItem('lang');
     translateParent.setDefaultLang(lang);
   }
 
