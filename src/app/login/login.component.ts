@@ -23,18 +23,14 @@ export class LoginComponent implements OnInit {
     password:new FormControl('',[Validators.required,Validators.minLength(6)]),
   })
 
-  formLogin = new FormGroup({
-
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-  })
+  constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
+    public translateChild: TranslateService, public app: AppComponent) { 
 
     window.localStorage.getItem('lang');
     
     //changer 'fr' en 'en' pour tester version anglais
     translateChild.setDefaultLang('fr');
   }
-
   ngOnInit(): void {}
   login(){
     this.authService.login(this.formLogin.value).subscribe(res=>this.handleResponse(res));
