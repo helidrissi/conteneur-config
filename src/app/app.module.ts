@@ -17,7 +17,7 @@ import {JwtInterceptor} from './services/jwt.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
+import { AccueilComponent } from './accueil/Accueil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
     HomeComponent,
     LoginComponent,
     SidebarComponent,
-    AcceuilComponent,
+    AccueilComponent,
     
   ],
   imports: [
