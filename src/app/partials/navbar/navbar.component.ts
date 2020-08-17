@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
     this.account.changeStatus(false);
     this.toastr.info(
       `Déconnexion`,
-      'Vous êtes déconnecter !',
+      'Vous êtes déconnecté !',
       {
         timeOut: 3000,
         positionClass: 'toast-bottom-left'
