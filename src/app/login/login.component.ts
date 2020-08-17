@@ -4,6 +4,7 @@ import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import{FormGroup,FormControl, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 import { TranslateService } from '@ngx-translate/core';
 import { AppComponent } from '../app.component';
@@ -15,6 +16,7 @@ import { AppComponent } from '../app.component';
 })
 export class LoginComponent implements OnInit {
   
+  
   formLogin=new FormGroup({
     
     email:new FormControl('',[Validators.required,Validators.email]),
@@ -24,15 +26,15 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
     public translateChild: TranslateService, public app: AppComponent) { 
 
-
-    var lang = window.localStorage.getItem('lang');
+    window.localStorage.getItem('lang');
+    
+    //changer 'fr' en 'en' pour tester version anglais
     translateChild.setDefaultLang('fr');
-
   }
 
   ngOnInit(): void {}
   login(){
-    this.authService.login(this.formLogin.value).subscribe(res=>this.handleResponse(res))
+    this.authService.login(this.formLogin.value).subscribe(res=>this.handleResponse(res));
   }
 
   handleResponse(res)
@@ -43,11 +45,13 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl("/");
   }
 
-  useLanguage(language: string) {
-    window.localStorage.setItem('lang',language);
+  //language: string = 'fr' , force le local storage a enregistrer la var 'fr' et a afficher la traduction FR,
+  //avec la propriété OnClick dans le HTML.
+  // useLanguage(language: string = 'fr') {
+  //   window.localStorage.setItem('lang',language);
 
-    this.translateChild.use(language);
-    this.app.translateParent = this.translateChild;
+  //   this.translateChild.use(language);
+  //   this.app.translateParent = this.translateChild;
 
-  }
+  // }
 }
