@@ -4,7 +4,6 @@ import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
-import * as $ from 'jquery';
 
 import { TranslateService } from '@ngx-translate/core';
 import { AppComponent } from '../app.component';
@@ -27,8 +26,6 @@ export class LoginComponent implements OnInit {
     public translateChild: TranslateService, public app: AppComponent) { 
 
     window.localStorage.getItem('lang');
-    
-    //changer 'fr' en 'en' pour tester version anglais
     translateChild.setDefaultLang('fr');
   }
   ngOnInit(): void {}
@@ -43,13 +40,9 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl("/");
   }
 
-  //language: string = 'fr' , force le local storage a enregistrer la var 'fr' et a afficher la traduction FR,
-  //avec la propriété OnClick dans le HTML.
-  // useLanguage(language: string = 'fr') {
-  //   window.localStorage.setItem('lang',language);
-
-  //   this.translateChild.use(language);
-  //   this.app.translateParent = this.translateChild;
-
-  // }
+  useLanguage(language: string) {
+    window.localStorage.setItem('lang',language);
+    this.translateChild.use(language);
+    this.app.translateParent = this.translateChild;
+  }
 }
