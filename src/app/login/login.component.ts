@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 import { AppComponent } from '../app.component';
+import { typeofExpr } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-login',
@@ -25,8 +26,18 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
     public translateChild: TranslateService, public app: AppComponent) { 
 
-    window.localStorage.getItem('lang');
-    translateChild.setDefaultLang('fr');
+    let browserLang : string = navigator.language;
+    browserLang = (browserLang.substring(0, 2));
+    if(browserLang){
+      if(browserLang == 'fr'){
+        translateChild.setDefaultLang('fr');
+      } else if((browserLang == 'en')) {
+        translateChild.setDefaultLang('en');
+      } else {
+        translateChild.setDefaultLang('fr')
+      }
+      window.localStorage.setItem('lang',browserLang);
+    }
   }
   ngOnInit(): void {}
   login(){
@@ -44,5 +55,6 @@ export class LoginComponent implements OnInit {
     window.localStorage.setItem('lang',language);
     this.translateChild.use(language);
     this.app.translateParent = this.translateChild;
+
   }
 }
