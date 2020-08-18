@@ -30,14 +30,24 @@ export class NavbarComponent implements OnInit {
 
     this.token.remove();
     this.account.changeStatus(false);
-    this.toastr.info(
-      `Déconnexion`,
-      'Vous êtes déconnecté !',
-      {
-        timeOut: 3000,
-        positionClass: 'toast-bottom-left'
-      }
-  )
+    let lang = window.localStorage.getItem('lang');
+    if(lang == 'en'){
+      this.toastr.info(
+        `Logout`,
+        'You are disconnected!',
+        {
+          timeOut: 3000,
+          positionClass: 'toast-bottom-left'
+        }
+      )} else {
+        this.toastr.info(
+          `Déconnexion`,
+          'Vous êtes déconnecté !',
+          {
+            timeOut: 3000,
+            positionClass: 'toast-bottom-left'
+          }
+        )}
     this.router.navigateByUrl("/login");
   }
 

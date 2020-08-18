@@ -11,7 +11,9 @@
         "LoginRequis": "This field must contain 6 characters minimum",
         "LoginErreur": "This field is required",
         "SelectLang": "Choose your language :",
-        "Choix": "Choose a language"
+        "Choix": "Choose a language",
+        "Lang1": "FRA",
+        "Lang2": "ENG"
     },
     "SideBar": {
         "Titre": "S@phir",
