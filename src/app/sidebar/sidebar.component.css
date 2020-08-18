@@ -199,11 +199,14 @@ a.article:hover {
     background-color: #0c2a77 !important;
 }
 
-@media (min-width: 1880px) {
+@media (min-width: 1925px) {
     #sidebarCollapse {
         visibility: hidden;
     }
     #sidebar.active {
         margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
     }
 }
