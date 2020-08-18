@@ -17,9 +17,12 @@ import {JwtInterceptor} from './services/jwt.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
+
 import { MarquesComponent } from './marques/marques.component';
 import { SafePipe } from './safe.pipe';
+
+import { AccueilComponent } from './accueil/Accueil.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +31,13 @@ import { SafePipe } from './safe.pipe';
     HomeComponent,
     LoginComponent,
     SidebarComponent,
-    AcceuilComponent,
+
+    
     MarquesComponent,
     SafePipe,
+
+    AccueilComponent
+
     
   ],
   imports: [

@@ -1,4 +1,4 @@
-<div class="row mt-5">
+<div class=" mt-5">
     <div class="col-md-6 mx-auto">
         <form [formGroup]="formLogin" (ngSubmit)="login()">
 
@@ -21,12 +21,11 @@
                 <div *ngIf="formLogin.get('password').getError('minlength')">{{"Login.LoginErreur" | translate}}</div>
             </div>
             <button [disabled]="formLogin.invalid" class="btn btn-primary black-background white btn-block">{{"Commun.Connexion" | translate}}</button>
-            <label for="language-select">{{"Login.SelectLang" | translate}}</label>
-            <select name="" id="selectLang">
-                    <option value="">{{"Login.Choix" | translate}}</option>
-                    <option class="langOption" (click)="useLanguage('fr')" value="fr">FR</option>
-                    <option class="langOption" (click)="useLanguage('en')" value="en">ENG</option>
-            </select>
         </form>
+        <div id="selectLang">
+            <label for="language-select">{{"Login.SelectLang" | translate}}</label>
+            <button class="lang" (click)="useLanguage('fr')">FRA</button>
+            <button class="lang" (click)="useLanguage('en')">ENG</button>
+        </div>
     </div>
 </div>
