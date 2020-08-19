@@ -7,7 +7,6 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './partials/navbar/navbar.component';
 import { PageNotFoundComponent } from './partials/page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -26,7 +25,6 @@ import { AccueilComponent } from './accueil/Accueil.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     PageNotFoundComponent,
     HomeComponent,
     LoginComponent,

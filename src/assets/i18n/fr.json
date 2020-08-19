@@ -11,7 +11,9 @@
         "LoginRequis": "Ce champ doit contenir 6 caractères minimum",
         "LoginErreur": "Ce champ est obligatoire",
         "SelectLang": "Choissisez la langue :",
-        "Choix": "Choissisez une langue"
+        "Choix": "Choissisez une langue",
+        "Lang1": "FRA",
+        "Lang2": "ENG"
     },
     "SideBar": {
         "Titre": "S@phir",

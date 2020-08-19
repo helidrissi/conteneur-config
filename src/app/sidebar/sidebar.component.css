@@ -46,6 +46,14 @@ a:focus {
     margin: 40px 0;
 }
 
+#content>nav {
+    background-color: #0c2a77;
+}
+
+button>.fa-align-justify {
+    color: #0c2a77;
+}
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -149,6 +157,11 @@ a.article:hover {
     color: #fff !important;
 }
 
+.btn-logout,
+.nav-link {
+    color: white !important;
+}
+
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -184,4 +197,16 @@ a.article:hover {
 
 #toast-container>.toast-info {
     background-color: #0c2a77 !important;
+}
+
+@media (min-width: 1925px) {
+    #sidebarCollapse {
+        visibility: hidden;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
 }
