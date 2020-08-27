@@ -9,9 +9,6 @@ import { TranslateService, DEFAULT_LANGUAGE } from '@ngx-translate/core';
 export class AppComponent {
   title = 'conteneur-front';
 
-  constructor(public translateParent: TranslateService){
-    var lang = window.localStorage.getItem('lang');
-    translateParent.setDefaultLang(lang);
-  }
+  
 
 }

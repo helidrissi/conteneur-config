@@ -31,19 +31,13 @@ export class TokenService {
   }
 
   decode(payload) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 95941192e394244a256c934ce7392b8f34290054
     return JSON.parse(atob(payload));
   }
 
   payload(token) {
     const payload = token.split('.')[1];
-<<<<<<< HEAD
    
-=======
->>>>>>> 95941192e394244a256c934ce7392b8f34290054
     return this.decode(payload);
   }
 

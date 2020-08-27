@@ -24,20 +24,9 @@ export class LoginComponent implements OnInit {
   })
 
   constructor(private authService:AuthService,private token:TokenService,private router:Router,private account:AccountService, 
-    public translateChild: TranslateService, public app: AppComponent) { 
+    public app: AppComponent) { 
 
-    let browserLang : string = navigator.language;
-    browserLang = (browserLang.substring(0, 2));
-    if(browserLang){
-      if(browserLang == 'fr'){
-        translateChild.setDefaultLang('fr');
-      } else if((browserLang == 'en')) {
-        translateChild.setDefaultLang('en');
-      } else {
-        translateChild.setDefaultLang('fr')
-      }
-      window.localStorage.setItem('lang',browserLang);
-    }
+    
   }
   ngOnInit(): void {}
   login(){
@@ -51,10 +40,5 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl("/");
   }
 
-  useLanguage(language: string) {
-    window.localStorage.setItem('lang',language);
-    this.translateChild.use(language);
-    this.app.translateParent = this.translateChild;
-
-  }
+  
 }
